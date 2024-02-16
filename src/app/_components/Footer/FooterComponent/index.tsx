@@ -10,6 +10,7 @@ import { Button } from '../../Button'
 import { Gutter } from '../../Gutter'
 
 import classes from './index.module.scss'
+import { ThemeSelector } from '../../../_providers/Theme/ThemeSelector'
 
 const FooterComponent = ({ footer }: { footer: Footer }) => {
   const pathname = usePathname()
@@ -40,6 +41,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
             <Link href="/">
               <Image src="/logo-white.svg" alt="logo" width={170} height={50} />
             </Link>
+            <ThemeSelector />
             <p>{footer.copyright}</p>
             <div className={classes.socialLinks}>
               {navItems.map(item => {
