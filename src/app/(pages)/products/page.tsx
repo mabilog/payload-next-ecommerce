@@ -27,9 +27,10 @@ const Products = async () => {
   } catch (error) {
     console.log(error)
   }
+
   return (
     <div className={classes.container}>
-      <Gutter className={classes.product}>
+      <Gutter className={classes.products}>
         <Filters categories={categories} />
         <Blocks blocks={page?.layout} disableTopPadding={true} />
       </Gutter>

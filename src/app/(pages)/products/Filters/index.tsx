@@ -13,6 +13,7 @@ const Filters = ({ categories }: { categories: Category[] }) => {
   const { categoryFilters, setCategoryFilters, sort, setSort } = useFilter()
 
   const handleCategories = (categoryId: string) => {
+    console.log('categoryId: ', categoryId)
     if (categoryFilters.includes(categoryId)) {
       const updatedCategories = categoryFilters.filter(id => id !== categoryId)
       setCategoryFilters(updatedCategories)
@@ -43,7 +44,7 @@ const Filters = ({ categories }: { categories: Category[] }) => {
           })}
         </div>
         <HR className={classes.hr} />
-        <h6 className={classes.title}>Soft by</h6>
+        <h6 className={classes.title}>Sort by</h6>
         <div className={classes.categories}>
           <RadioButton
             label="Latest"
